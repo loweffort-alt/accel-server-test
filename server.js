@@ -11,7 +11,7 @@ app.use("/prueba.json", async (req, res) => {
       id: 239,
       NumeroReporte: 116,
       FechaLocal: "2024-02-19",
-      HoraLocal: "09:34:32",
+      HoraLocal: "06:23:10",
       Magnitud: 5.5,
       Referencia: "El deous",
       Latitud: -9.44,
