@@ -8,10 +8,10 @@ app.use(cors());
 app.use("/prueba.json", async (req, res) => {
   const fakeData = [
     {
-      id: 239,
+      id: 251,
       NumeroReporte: 116,
-      FechaLocal: "2024-02-19",
-      HoraLocal: "06:23:10",
+      FechaLocal: "2024-04-18",
+      HoraLocal: "01:53:12",
       Magnitud: 5.5,
       Referencia: "El deous",
       Latitud: -9.44,
