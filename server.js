@@ -6,12 +6,30 @@ const app = express();
 app.use(cors());
 
 app.use("/prueba.json", async (req, res) => {
+  const currentTime = new Date().getTime();
+  const lastMinutes = 1 * 60 * 1000;
+  // Crear un objeto Date con el tiempo en milisegundos
+  const currentDate = new Date(currentTime - lastMinutes);
+  console.log({ currentTime, currentDate });
+  // Obtener los componentes de la fecha y la hora
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth() + 1; // Los meses van de 0 a 11
+  const day = currentDate.getDate();
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+  const seconds = currentDate.getSeconds();
+
+  // Formatear la fecha y la hora según sea necesario
+  const formattedDate = `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
+  const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  console.log({ formattedTime, formattedDate });
+
   const fakeData = [
     {
-      id: 251,
+      id: 262,
       NumeroReporte: 116,
-      FechaLocal: "2024-04-18",
-      HoraLocal: "01:53:12",
+      FechaLocal: formattedDate,
+      HoraLocal: formattedTime,
       Magnitud: 5.5,
       Referencia: "El deous",
       Latitud: -9.44,
