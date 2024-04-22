@@ -26,7 +26,7 @@ app.use("/prueba.json", async (req, res) => {
 
   const fakeData = [
     {
-      id: 262,
+      id: 275,
       NumeroReporte: 116,
       FechaLocal: formattedDate,
       HoraLocal: formattedTime,
